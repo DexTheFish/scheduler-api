@@ -125,3 +125,14 @@ Response:
   }
 }
 ```
+
+
+### Heroku API
+To connect to the heroku database on your device, use
+```
+$ cd scheduler-api
+$ psql -h ec2-34-203-182-65.compute-1.amazonaws.com -p 5432 -U nndakzecxjlujw -d d5inf6rvo6umeq
+```
+which prompts for a PW which can be found under Config Vars on the Heroku website.
+The API can be found at https://appointment-scheduler-api.herokuapp.com/api/days however it will shut down after 30 minutes of inactivity and takes several seconds to revive (just send a request).
+
